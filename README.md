@@ -3,10 +3,9 @@
 Reproducibility package for the preregistered study of extensive-lesion robustness
 in feed-forward Markov chains. It contains the **frozen preregistered protocol**, the
 **analysis code**, the **frozen data outputs**, and **SHA-256 manifests**, so that
-every result and figure in the paper can be reproduced — either quickly from the
+every reported result and figure can be reproduced — either quickly from the
 frozen outputs, or fully from scratch by rerunning the pipeline.
 
-- Paper: `paper/main.tex` (Phys. Rev. E format; `paper/main.pdf` is a build).
 - Central result: the disorder-averaged dead-end robustness curve is an exact
   functional of the visited-range distribution P(V),
   `E_D[R_dead(η)]/R0 = E_ω[ C(n_b−V, r) / C(n_b, r) ]`,
@@ -26,8 +25,7 @@ repository is assembled. The scientific record is fixed by:
   preregistration trail.
 - `MANIFEST.sha256` — SHA-256 of every file in the repository.
 
-The seeds and sizes are registered in `protocol/PROTOCOL_v1.1.md` (Appendix A of the
-paper summarizes them): n=256, T=64, λ=1−2^(−1/64), resolutions ℓ∈{1,2,4,8,16};
+The seeds and sizes are registered in `protocol/PROTOCOL_v1.1.md` (the registered protocol lists them): n=256, T=64, λ=1−2^(−1/64), resolutions ℓ∈{1,2,4,8,16};
 family random-permutation seeds, per-member trajectory seed `2026400000 + 1e4·index`
 (M=10^6), and the validation removal seed.
 
@@ -56,7 +54,7 @@ python make_fig1.py               # Fig. 1 schematic
 
 Expected: `data/tm_E2_table.csv` reproduces the frozen table (family verdict
 `H_dist`; 15 mean-sufficient cells; 105/120 close at second order; 14 improve-not-
-closed; 1 higher-order), and `fig2_regime_map.pdf`, `fig3_curves.pdf` match the paper.
+closed; 1 higher-order), and `fig2_regime_map.pdf`, `fig3_curves.pdf` reproduce the reported figures.
 
 ## Full reproduction (from scratch)
 
@@ -109,10 +107,9 @@ protocol/   frozen preregistered protocol (v1.1), freeze record, superseded v1.0
 tm_*.py     analysis modules and pipeline entry points  (run from repo root)
 data/       frozen outputs: P̂(V), moments manifest, E2 table, summary
 tm_candidates_v11.csv, tm_checks_v11.json, tm_predictors_v11.csv   frozen Phase-1/2 records
-paper/      LaTeX source, figures, and a compiled PDF
 ```
 
-The pipeline modules read their inputs by the relative paths used in the paper
+The pipeline modules read their inputs by the relative paths used throughout the analysis
 (`tm_candidates_v11.csv`, `data/…`), so they are run from the repository root.
 
 ## Family and endpoints in brief
@@ -131,5 +128,5 @@ Code: MIT (`LICENSE`). Data, protocol, and figures: CC-BY-4.0 (`LICENSE-DATA`).
 
 ## Citing
 
-See `CITATION.cff`. Please cite the paper and, for the exact frozen release, the
+See `CITATION.cff`. Please cite the associated article and, for the exact frozen release, the
 archived DOI (mint one via Zenodo on the tagged release; see `.zenodo.json`).
