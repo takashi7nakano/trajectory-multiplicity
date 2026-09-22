@@ -1,0 +1,11 @@
+{
+  "title": "Moment compression of visited-range distributions for extensive-lesion robustness in layered Markov chains",
+  "upload_type": "software",
+  "description": "Reproducibility package: frozen preregistered protocol, analysis code, frozen data outputs, and SHA-256 manifests for the study of extensive-lesion robustness in feed-forward Markov chains. Supports quick reproduction from frozen outputs and full from-scratch reproduction of the pipeline.",
+  "creators": [
+    {"name": "Nakano, Takashi", "affiliation": "Research Center for Nuclear Physics, The University of Osaka"}
+  ],
+  "license": "MIT",
+  "keywords": ["random walk range", "trapping", "coarse graining", "moment closure", "robustness", "preregistration", "statistical physics"],
+  "access_right": "open"
+}

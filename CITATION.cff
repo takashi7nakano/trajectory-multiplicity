@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the paper and the archived release."
+title: "Moment compression of visited-range distributions for extensive-lesion robustness in layered Markov chains"
+authors:
+  - family-names: Nakano
+    given-names: Takashi
+    affiliation: "Research Center for Nuclear Physics, The University of Osaka, Osaka, Japan"
+version: "1.1"
+date-released: "2026-09-22"
+license: MIT
+keywords:
+  - random walk range
+  - trapping
+  - coarse graining
+  - moment closure
+  - robustness
+  - preregistration
